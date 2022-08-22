@@ -43,7 +43,7 @@ class LoginView(TemplateView):
         if user:
             login(request,user)
             print("success")
-            if request.user.role == "faculty":
+            if request.user.role=="faculty":
                 return render(request,"f_home.html")
             else:
                 return render(request,"s_home.html")
